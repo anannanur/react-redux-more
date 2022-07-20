@@ -1,0 +1,21 @@
+.todo{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: .5rem;
+    padding: 1rem;
+}
+article{
+    background-color: blueviolet;
+    color: white;
+    padding: .5rem;
+}
+@media (max-width: 600px) {
+    .todo{
+        grid-template-columns: auto;
+    }
+}
+@media (min-width: 600px) and (max-width : 768px) {
+    .todo{
+        grid-template-columns: auto auto;
+    }
+}
