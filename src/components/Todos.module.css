@@ -1,21 +1,59 @@
-.todo{
+.todo {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: .5rem;
     padding: 1rem;
 }
-article{
-    background-color: blueviolet;
-    color: white;
+
+article {
+    background-color: #1A4D2E;
+    color: #FAF3E3;
     padding: .5rem;
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+
+}
+
 @media (max-width: 600px) {
-    .todo{
+    .todo {
         grid-template-columns: auto;
     }
 }
+
 @media (min-width: 600px) and (max-width : 768px) {
-    .todo{
+    .todo {
         grid-template-columns: auto auto;
     }
 }
