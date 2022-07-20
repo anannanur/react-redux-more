@@ -16,8 +16,8 @@ const Todos = () => {
     return (
         <div>
             <h1 style={{color: '#FF9F29'}}>Todos App</h1>
-            {isLoading && <h4>Loading...</h4>}
-            {error && <h4>{error.message}</h4>}
+            {isLoading && <h4 style={{color: '#FF9F29'}}>Loading...</h4>}
+            {error && <h4 style={{color: 'red'}}>{error.message}</h4>}
             <section className={styles.todo}>
                 {
                     todos.map(todo =>{
