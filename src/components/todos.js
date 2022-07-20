@@ -15,9 +15,18 @@ const Todos = () => {
 
     return (
         <div>
-            <h1 style={{color: '#FF9F29'}}>Todos App</h1>
-            {isLoading && <h4 style={{color: '#FF9F29'}}>Loading...</h4>}
-            {error && <h4 style={{color: 'red'}}>{error.message}</h4>}
+            {!isLoading && <h1 style={{color: '#FF9F29'}}>Todos App</h1>}
+            {isLoading && <div style={{
+                display : 'flex',
+                justifyContent : 'center',
+                alignItems : 'center',
+                height: '80vh',
+                flexDirection: 'column'
+            }}>
+            <h1 style={{color: 'red'}}>Loading...</h1>
+            </div>}
+            {error && <h4 style={{color: 'red'}}>{error}</h4>}
+            
             <section className={styles.todo}>
                 {
                     todos.map(todo =>{
